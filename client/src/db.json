@@ -1,0 +1,241 @@
+{
+  "users": [
+    {
+      "login": "admin",
+      "password": "qwerty123",
+      "registed_at": "2025-06-05 09:00",
+      "role_id": 0,
+      "job": "Руководитель",
+      "id": "67ff"
+    },
+    {
+      "login": "ivan",
+      "password": "qwerty123",
+      "registed_at": "2025-06-10 11:00",
+      "role_id": 2,
+      "job": "Исполнитель",
+      "id": "dsaf"
+    },
+    {
+      "login": "niko",
+      "password": "qwerty123",
+      "registed_at": "2025-06-12 11:00",
+      "role_id": 2,
+      "job": "Исполнитель",
+      "id": "dssf"
+    },
+    {
+      "id": "04f3",
+      "login": "reno",
+      "password": "qwerqwer",
+      "registed_at": "14.06.2025, 09:16",
+      "role_id": 2,
+      "job": "Исполнитель"
+    },
+    {
+      "id": "cf29",
+      "login": "renoo",
+      "password": "qwerqwer",
+      "registed_at": "14.06.2025, 09:18",
+      "role_id": 2,
+      "job": "Исполнитель"
+    },
+    {
+      "id": "4643",
+      "login": "Read",
+      "password": "qwerqwer",
+      "registed_at": "14.07.2025, 13:11",
+      "role_id": 2,
+      "job": "Исполнитель"
+    },
+    {
+      "id": "8feb",
+      "login": "Oleg",
+      "password": "qwerqwer",
+      "registed_at": "15.08.2025, 22:02",
+      "role_id": 0,
+      "job": "Руководитель"
+    }
+  ],
+  "roles": [
+    {
+      "id": "0",
+      "name": "Руководитель"
+    },
+    {
+      "id": "1",
+      "name": "Заместитель"
+    },
+    {
+      "id": "2",
+      "name": "Исполнитель"
+    },
+    {
+      "id": "3",
+      "name": "Гость"
+    }
+  ],
+  "todos": [
+    {
+      "id": "001",
+      "title": "Обновить данные",
+      "content": "Обнывфыфввыфыф ыфввфывыфывфыфчся сячсячс",
+      "published_at": "2025-06-05",
+      "deadline": "2025-07-01",
+      "user_id": "dsaf",
+      "done": false
+    },
+    {
+      "id": "003",
+      "title": "Исправить все ошибки!!!!",
+      "content": "Возникают ошибки при работе в программе ВСЕ ВРЕМЯ",
+      "published_at": "2025-06-06 10:00",
+      "deadline": "2025-06-09 12:00",
+      "user_id": "dssf",
+      "done": true
+    },
+    {
+      "id": "004",
+      "title": "Исправить все ошибки",
+      "content": "Возникают ошибки при работе в программе",
+      "published_at": "2025-06-06 10:00",
+      "deadline": "2025-06-07 09:00",
+      "user_id": "dssf",
+      "done": false
+    },
+    {
+      "id": "f865",
+      "title": "Новая задача 2",
+      "content": "Исправил",
+      "published_at": "09.07.2025, 14:54",
+      "deadline": "2025-07-09 16:54",
+      "user_id": "dssf",
+      "done": false
+    },
+    {
+      "id": "6304",
+      "title": "Новая задача",
+      "content": "проверка",
+      "published_at": "09.07.2025, 15:33",
+      "deadline": "2025-07-12 17:33",
+      "user_id": "dssf",
+      "done": false
+    },
+    {
+      "id": "7704",
+      "title": "Проверка ",
+      "content": "новая",
+      "published_at": "09.07.2025, 15:34",
+      "deadline": "2025-07-10 18:34",
+      "user_id": "dssf",
+      "done": true
+    },
+    {
+      "id": "d333",
+      "title": "Курсы",
+      "content": "Приступить к курсам",
+      "published_at": "11.07.2025, 18:56",
+      "deadline": "2025-07-14 20:56",
+      "user_id": "04f3",
+      "done": false
+    },
+    {
+      "id": "7e8a",
+      "title": "Попей чай",
+      "content": "Заметил, что ты совсем обезвожен. Срочно выпей чай",
+      "published_at": "14.07.2025, 13:29",
+      "deadline": "2025-07-14 14:28",
+      "user_id": "4643",
+      "done": false
+    },
+    {
+      "id": "92c1",
+      "title": "Да, опять работа ",
+      "content": "Пройди Варкрофт 3",
+      "published_at": "15.08.2025, 22:03",
+      "deadline": "2025-08-18 17:02",
+      "user_id": "8feb",
+      "done": false
+    }
+  ],
+  "session": [
+    {
+      "id": "7ca6",
+      "hash": "0.02171652842226268198544403276173397898674011230469",
+      "user": {
+        "login": "admin",
+        "password": "qwerty123",
+        "registedAt": "2025-06-05 09:00",
+        "roleId": 0,
+        "id": "67ff",
+        "job": "Руководитель"
+      }
+    },
+    {
+      "id": "681d",
+      "hash": "0.03204474678797319953105215972755104303359985351563",
+      "user": {
+        "login": "admin",
+        "password": "qwerty123",
+        "registedAt": "2025-06-05 09:00",
+        "roleId": 0,
+        "id": "67ff",
+        "job": "Руководитель"
+      }
+    },
+    {
+      "id": "e33f",
+      "hash": "0.86691984066776206496740542206680402159690856933594",
+      "user": {
+        "login": "admin",
+        "password": "qwerty123",
+        "registedAt": "2025-06-05 09:00",
+        "roleId": 0,
+        "id": "67ff",
+        "job": "Руководитель"
+      }
+    },
+    {
+      "id": "8164",
+      "hash": "0.07217692684822651916221047940780408680438995361328",
+      "user": {
+        "login": "admin",
+        "password": "qwerty123",
+        "registedAt": "2025-06-05 09:00",
+        "roleId": 0,
+        "id": "67ff",
+        "job": "Руководитель"
+      }
+    }
+  ],
+  "comments": [
+    {
+      "id": "5583",
+      "author_login": "reno",
+      "todos_id": "001",
+      "content": "fdsdsdfs",
+      "publishedAt": "09.07.2025, 16:51"
+    },
+    {
+      "id": "def6",
+      "author_login": "niko",
+      "todos_id": "f865",
+      "content": "исправил",
+      "publishedAt": "14.07.2025, 13:24"
+    },
+    {
+      "id": "284b",
+      "author_login": "admin",
+      "todos_id": "7e8a",
+      "content": "Ты до сих пор его не выпил. СРОЧНО!",
+      "publishedAt": "14.07.2025, 13:29"
+    },
+    {
+      "id": "01f8",
+      "author_login": "admin",
+      "todos_id": "001",
+      "content": "fdsfdsf",
+      "publishedAt": "15.08.2025, 21:59"
+    }
+  ]
+}
