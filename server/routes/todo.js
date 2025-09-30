@@ -19,7 +19,7 @@ const router = express.Router({ mergeParams: true });
 router.post(
   "/",
   auth,
-  hasRole([ROLES.ADMIN, ROLES.MODERATOR, ROLES.READ]),
+  hasRole([ROLES.ADMIN, ROLES.MODERATOR]),
   async (req, res) => {
     try {
       const newTodo = await addTodo({
@@ -74,7 +74,7 @@ router.delete(
 router.get(
   "/",
   auth,
-  hasRole([ROLES.ADMIN, ROLES.MODERATOR]),
+  hasRole([ROLES.ADMIN, ROLES.MODERATOR, ROLES.READ]),
   async (req, res) => {
     try {
       const allTodo = await getTodo();

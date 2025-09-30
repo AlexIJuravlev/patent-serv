@@ -16,11 +16,16 @@ const TableUserContainer = ({ className }) => {
 
 export const TableUser = styled(TableUserContainer)`
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	flex-direction: column;
 	margin: 15px -10px;
+
 	h2 {
 		display: flex;
 		justify-content: center;
+		align-items: center;
+		
 		margin: 40px 0 20px;
 	}
 
@@ -31,5 +36,13 @@ export const TableUser = styled(TableUserContainer)`
 		width: 100%;
 	}
 
+	@media (max-width: 550px) {
+		.info {
+			width: 95%;
+		}
 
+		h2 {
+			margin: 40px 0 20px 20px;
+		}
+	}
 `;

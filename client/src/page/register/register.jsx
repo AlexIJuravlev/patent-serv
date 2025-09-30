@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import * as yup from 'yup';
 import { Input, Button } from '../../components';
-import { Navigate } from 'react-router';
+import { Link, Navigate } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectUserRole } from '../../selectors';
 import { useForm } from 'react-hook-form';
@@ -44,11 +44,20 @@ const BlogAuth = styled.div`
 	margin: 0 auto;
 `;
 
+const StyledLink = styled(Link)`
+	text-align: center;
+	text-decoration: underline;
+	color: white;
+	margin: 0 0 20px;
+	font-size: 18px;
+`;
 
 const RegisterContainer = ({ className }) => {
 	const dispatch = useDispatch();
 
 	const roleId = useSelector(selectUserRole);
+
+
 
 	const {
 		register,
@@ -115,6 +124,7 @@ const RegisterContainer = ({ className }) => {
 					/>
 					{errorMessage && <MessageError>{errorMessage}</MessageError>}
 					<br />
+					<StyledLink to='/login'>Есть логин?</StyledLink>
 					<Button width='50%' type='submit' size='14px' disabled={!!formError}>
 						Зарегестрироваться
 					</Button>

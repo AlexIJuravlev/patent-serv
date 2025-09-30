@@ -70,10 +70,6 @@ const NewTaskContainer = ({ className }) => {
 				/>
 
 				<div className='task_time'>
-					<div className='published_at'>
-						<div>Дата создания</div>
-						<div className='published_at_content'></div>
-					</div>
 					<div className='deadline'>
 						<div>Срок выполнения</div>
 						<input
@@ -152,7 +148,9 @@ export const NewTask = styled(NewTaskContainer)`
 		display: flex;
 		justify-content: space-between;
 		margin: 50px 80px;
+		text-align: center;
 	}
+
 
 	.content {
 		width: 200px;
@@ -179,11 +177,74 @@ export const NewTask = styled(NewTaskContainer)`
 	}
 
 	.deadline {
-		margin: 0 10px 0 0;
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.deadline_date {
 		width: 100px;
 		height: 20px;
+		margin: 10px;
+	}
+
+	@media (max-width: 550px) {
+		width: 90%;
+		max-width: 350px;
+		margin: 20px auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.task-box {
+			margin: 20px;
+			width: 100%;
+		}
+
+		.title_task {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.task_time {
+			flex-direction: column;
+			margin: 20px 0;
+			gap: 20px;
+		}
+
+		.task_info {
+			flex-direction: column;
+			margin: 30px 0;
+			gap: 30px;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.content {
+			width: 100%;
+			max-width: 280px;
+			word-wrap: break-word;
+			margin: 10px 0 0 0;
+			text-align: center;
+		}
+
+		.published_at,
+		.deadline {
+			margin: 0;
+			text-align: center;
+		}
+
+		.published_at_content,
+		.deadline_content {
+			margin: 5px 0 0 0;
+			font-weight: bold;
+		}
+
+		.done_check {
+			margin: 15px 0 0 0;
+			transform: scale(1.8);
+		}
 	}
 `;

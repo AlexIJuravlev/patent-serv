@@ -11,14 +11,14 @@ const TaskContainer = ({ className }) => {
 	const todo = useSelector(todoTodoSelect);
 	const [isLoading, setIsLoading] = useState(true);
 	const isEditing = useMatch('/todos/:userId/:todoId/edit');
-	const navigate = useNavigate()
-	const {userId, todoId} = useParams()
+	const navigate = useNavigate();
+	const { userId, todoId } = useParams();
 
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		setIsLoading(true);
-		dispatch(deleteTodos())
+		dispatch(deleteTodos());
 		setTimeout(() => {
 			dispatch(loadTodoData(userId, todoId))
 				.then(() => {
@@ -29,9 +29,7 @@ const TaskContainer = ({ className }) => {
 					navigate('/*');
 				});
 		}, 300);
-
 	}, [dispatch, navigate]);
-
 
 	const SpecialFormTask = isEditing ? (
 		<TaskForm todo={todo} />
@@ -42,15 +40,7 @@ const TaskContainer = ({ className }) => {
 		</div>
 	);
 
-	return (
-		<>
-			{isLoading ? (
-				<Loader />
-			) : (
-SpecialFormTask
-			)}
-		</>
-	);
+	return <>{isLoading ? <Loader /> : SpecialFormTask}</>;
 };
 
 export const Task = styled(TaskContainer)`

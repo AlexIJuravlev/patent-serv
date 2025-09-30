@@ -49,10 +49,8 @@ const TaskUserContainer = ({
 };
 export const TaskUser = styled(TaskUserContainer)`
 	display: flex;
-	margin: 30px auto;
+	margin: 20px auto;
 	max-width: 85%;
-
-	position: relative;
 
 	a {
 		text-decoration: none;
@@ -99,5 +97,68 @@ export const TaskUser = styled(TaskUserContainer)`
 		text-align: center;
 		border: none;
 		resize: none;
+	}
+	@media (max-width: 780px) {
+		width: 80%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 30px 0 0;
+
+		.box-check {
+			margin: 0 0 0 0px;
+		}
+
+		.box-content {
+			width: 250px;
+		}
+	}
+
+	@media (max-width: 550px) {
+		width: 80%;
+		display: flex;
+		flex-direction: column;
+		margin: 30px 0 0;
+
+		.box-btn {
+			color: white;
+			font-size: 18px;
+			background-color: #563de4;
+			border-radius: 25px;
+			width: 150px;
+			height: 50px;
+			margin-top: 10px;
+			cursor: pointer;
+			text-transform: capitalize;
+		}
+
+		.box-task {
+			border: 1px solid black;
+			border-radius: 25px;
+			display: flex;
+			flex-direction: column;
+			margin: 10px 0;
+			padding: 0;
+			width: 100%;
+		}
+
+		.box-check {
+			display: none;
+		}
+
+		.box-content {
+			width: 100%;
+			font-size: 20px;
+			display: flex;
+			text-align: center;
+			justify-content: center;
+			align-items: center;
+			margin: 10px 0;
+		}
+
+		.box-deadline {
+			width: 100%;
+			margin: 10px 0;
+		}
 	}
 `;

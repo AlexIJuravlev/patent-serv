@@ -45,4 +45,9 @@ export const UsersCard = styled(UsersCardContainer)`
 	.box-login {
 		margin: 60px auto;
 	}
+
+	@media (max-width: 550px) {
+		margin: 20px auto;
+
+	}
 `;

@@ -83,4 +83,8 @@ export const User = styled(UserContainer)`
 		text-transform: capitalize;
 		width: 50px;
 	}
+
+	@media (max-width: 550px) {
+		width: 95%;
+	}
 `;

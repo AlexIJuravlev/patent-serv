@@ -31,4 +31,29 @@ export const TableList = styled(TableListContainer)`
 		min-width: 450px;
 	}
 
+	@media (max-width: 550px) {
+		display: none;
+	}
+
+	@media (max-width: 780px) {
+		margin: 30px 0 0;
+
+		.task {
+			min-width: 100px;
+			margin: 0 0 0 20px;
+		}
+
+		.deadline {
+			min-width: 100px;
+			margin: 0 0 0 40px;
+		}
+
+		.done {
+			min-width: 100px;
+		}
+		.comment {
+			min-width: 200px;
+			margin: 0 0 0 40px;
+		}
+	}
 `;

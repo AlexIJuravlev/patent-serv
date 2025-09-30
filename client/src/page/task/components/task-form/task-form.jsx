@@ -157,9 +157,66 @@ export const TaskForm = styled(TaskFormContainer)`
 		margin: 0 10px 0 0;
 	}
 
-	.deadline_date{
+	.deadline_date {
 		width: 100px;
 		height: 20px;
 	}
 
+	@media (max-width: 550px) {
+		width: 90%;
+		max-width: 350px;
+		margin: 20px auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+
+		.task-box {
+			margin: 20px;
+			width: 100%;
+		}
+
+		.title_task {
+			width: 50%;
+			margin: 0 auto;
+		}
+
+		.task-time {
+			flex-direction: column;
+			margin: 20px 0;
+			gap: 20px;
+		}
+
+		.task-info {
+			flex-direction: column;
+			margin: 30px 0;
+			gap: 30px;
+			align-items: center;
+		}
+
+		.content {
+			width: 100%;
+			max-width: 280px;
+			word-wrap: break-word;
+			margin: 10px 0 0 0;
+			text-align: center;
+		}
+
+		.published_at,
+		.deadline {
+			margin: 0;
+			text-align: center;
+		}
+
+		.published_at_content,
+		.deadline_content {
+			margin: 5px 0 0 0;
+			font-weight: bold;
+		}
+
+		.done_check {
+			margin: 15px 0 0 0;
+			transform: scale(1.8);
+		}
+	}
 `;

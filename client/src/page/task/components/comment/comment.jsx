@@ -66,4 +66,8 @@ export const Comments = styled(CommentsContainer)`
 		width: 100%;
 		resize: none;
 	}
+
+	@media (max-width: 550px) {
+		width: 80%;
+	}
 `;

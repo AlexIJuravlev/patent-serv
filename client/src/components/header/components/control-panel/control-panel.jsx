@@ -48,7 +48,6 @@ const ControlPanelContainer = ({ className }) => {
 					</div>
 					<Icon
 						id='fa-sign-out'
-						margin='7px 50px 0 20px'
 						color='white'
 						onClick={onLogout}
 					/>
@@ -60,6 +59,7 @@ const ControlPanelContainer = ({ className }) => {
 
 export const ControlPanel = styled(ControlPanelContainer)`
 	display: flex;
+	margin: 0px 50px 0 20px;
 
 	.welcom {
 		color: white;
@@ -109,5 +109,16 @@ export const ControlPanel = styled(ControlPanelContainer)`
 	a:hover:before,
 	a:hover:after {
 		width: 50%;
+	}
+
+	@media (max-width: 550px) {
+		margin: 0 15px 0 ;
+
+		.welcom {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 auto;
+		}
 	}
 `;

@@ -12,7 +12,7 @@ const ROLES = require("../contants/roles");
 
 const router = express.Router({ mergeParams: true });
 
-router.get("/", auth, hasRole([ROLES.ADMIN]), async (req, res) => {
+router.get("/", auth, hasRole([ROLES.ADMIN, ROLES.MODERATOR]), async (req, res) => {
   const users = await getUsers();
 
   res.send({ data: users.map(mapUser) });

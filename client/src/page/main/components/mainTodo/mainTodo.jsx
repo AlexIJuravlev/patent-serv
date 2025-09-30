@@ -29,6 +29,8 @@ const MainTodoContainer = ({ className }) => {
 
 
 
+
+
 	return (
 		<div className={className}>
 			{isLoading ? (
@@ -49,5 +51,7 @@ export const MainTodo = styled(MainTodoContainer)`
 	display: flex;
 	margin: 50px 50px;
 	justify-content: center;
+	align-items: center;
 	flex-wrap: wrap;
+
 `;

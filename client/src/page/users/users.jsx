@@ -39,7 +39,7 @@ Promise.all([request('/api/users/roles'), request('/api/users')]).then(
 		<div className={className}>
 			<TableUser />
 			{errorMessage ? (
-				<div>Ошибка</div>
+				<div className='error'>Ошибка прав доступа</div>
 			) : (
 				users.map(({ login, id, roleId }) => (
 
@@ -64,4 +64,16 @@ export const Users = styled(UsersContainer)`
 	width: 100%;
 	max-width: 500px;
 
+	.error {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: red;
+		font-size: 22px;
+	}
+
+	@media (max-width: 550px) {
+		width: 85%;
+		margin: 0 10px;
+	}
 `;

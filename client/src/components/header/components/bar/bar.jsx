@@ -4,10 +4,13 @@ import { Icon } from '../../../icon/icon';
 import { useSelector } from 'react-redux';
 import { selectUserRole } from '../../../../selectors';
 import { ROLE } from '../../../../constant';
+import { useState } from 'react';
+import { Burger } from '../burger/burger';
 
 const BarContainer = ({ className }) => {
 	const navigate = useNavigate()
 	const role = useSelector(selectUserRole)
+	const [isOpenMenu, setIsOpenMenu] = useState(false)
 
 	return (
 		<div className={className}>
@@ -22,11 +25,23 @@ const BarContainer = ({ className }) => {
 						size='20px'
 						onClick={() => navigate(-1)}
 					/>
-					{role === ROLE.ADMIN ? (
+					{role === ROLE.ADMIN || role === ROLE.MODERATOR ? (
 						<>
-							<Link to='/'>Главная</Link>
-							<Link to='/newTodo'>Создать задачу</Link>
-							<Link to='/users'>Все сотрудники</Link>
+							<div className='burger'>
+								<Icon
+									id='fa-bars'
+									margin='0 0 0 20px'
+									color='white'
+									size='20px'
+									onClick={() => setIsOpenMenu(!isOpenMenu)}
+								/>
+								{isOpenMenu ? <Burger setIsOpenMenu={setIsOpenMenu}/> : ''}
+							</div>
+							<div className='dekstop'>
+								<Link to='/'>Главная</Link>
+								<Link to='/newTodo'>Создать задачу</Link>
+								<Link to='/users'>Все сотрудники</Link>
+							</div>
 						</>
 					) : (
 						<Link to='/'>Главная</Link>
@@ -42,6 +57,16 @@ export const Bar = styled(BarContainer)`
 	align-items: center;
 	width: 25%;
 	margin: 0 0 0 60px;
+
+	.burger {
+		display: none;
+	}
+
+	.dekstop {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
 	a {
 		position: relative;
@@ -74,5 +99,15 @@ export const Bar = styled(BarContainer)`
 	a:hover:before,
 	a:hover:after {
 		width: 50%;
+	}
+
+	@media (max-width: 550px) {
+		margin: 0 0 0 20px;
+		.dekstop {
+			display: none;
+		}
+		.burger {
+			display: flex;
+		}
 	}
 `;

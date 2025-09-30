@@ -73,4 +73,10 @@ const TodoListContainer = ({ className }) => {
 	);
 };
 
-export const TodoList = styled(TodoListContainer)``;
+export const TodoList = styled(TodoListContainer)`
+display:flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+margin: 0 auto;
+`;
