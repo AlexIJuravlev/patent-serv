@@ -68,12 +68,15 @@ export const Users = styled(UsersContainer)`
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		text-align: center;
 		color: red;
 		font-size: 22px;
 	}
 
 	@media (max-width: 550px) {
 		width: 85%;
-		margin: 0 10px;
+		margin: 0 auto;
+
+
 	}
 `;

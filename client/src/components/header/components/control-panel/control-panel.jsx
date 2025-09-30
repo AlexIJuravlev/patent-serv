@@ -13,8 +13,8 @@ import { logout } from '../../../../action';
 const UserName = styled.div`
 	color: white;
 	text-transform: uppercase;
-	margin: 0 0 0 55px;
 	font-size: 20px;
+	margin: 0 auto;
 `;
 
 const JobTitle = styled.div`
@@ -77,6 +77,7 @@ export const ControlPanel = styled(ControlPanelContainer)`
 	.data {
 		display: flex;
 		flex-direction: column;
+
 	}
 
 	a {

@@ -25,15 +25,15 @@ export const TableUser = styled(TableUserContainer)`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		
 		margin: 40px 0 20px;
 	}
 
 	.info {
 		display: flex;
 		justify-content: space-between;
-		margin: 0 10px;
-		width: 100%;
+		align-items: center;
+		width: 95%;
+		margin: 0 0 0 20px;
 	}
 
 	@media (max-width: 550px) {
